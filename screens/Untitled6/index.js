@@ -1,7 +1,9 @@
+import { useNavigation } from "@react-navigation/native";
 import React from 'react';
 import { View, Text, Image, TouchableOpacity } from 'react-native';
 
 const PlayerDetailsScreen = () => {
+  const navigation = useNavigation();
   return <View style={styles.container}>
       <View style={styles.header}>
         <Text style={styles.title}>Player Details</Text>
@@ -65,7 +67,9 @@ const PlayerDetailsScreen = () => {
         /* Render edit icon */
       }
       </TouchableOpacity>
-      <TouchableOpacity style={styles.requestButton}>
+      <TouchableOpacity style={styles.requestButton} onPress={() => {
+      navigation.navigate("Untitled9");
+    }}>
         <Text style={styles.requestButtonText}>Request Details</Text>
       </TouchableOpacity>
       <TouchableOpacity style={styles.archiveButton}>

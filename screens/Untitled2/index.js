@@ -11,7 +11,7 @@ const App = () => {
       <TextInput style={styles.input} placeholder="Username" />
       <TextInput style={styles.input} placeholder="Password" secureTextEntry />
       <TouchableOpacity style={styles.button} onPress={() => {
-      navigation.navigate("Untitled4");
+      navigation.navigate("Untitled14");
     }}>
         <Text style={styles.buttonText}>Sign-in</Text>
       </TouchableOpacity>

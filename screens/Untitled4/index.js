@@ -9,7 +9,7 @@ const ScreenComponent = () => {
         <Text style={styles.title}>Visual Representation of Data</Text>
       </View>
       <View style={styles.instructions} onPress={() => {
-      navigation.navigate("Untitled10");
+      navigation.navigate("Untitled5");
     }}>
         <Text style={styles.instructionText}>Select Player/s</Text>
         <Text style={styles.instructionText}>Strength Progress</Text>

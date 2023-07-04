@@ -1,3 +1,5 @@
+import { Pressable } from "react-native";
+import { useNavigation } from "@react-navigation/native";
 import React, { useState } from 'react';
 import { View, Text, TextInput, TouchableOpacity, FlatList, Image, StyleSheet } from 'react-native';
 const data = [{
@@ -27,6 +29,7 @@ const data = [{
 }];
 
 const SearchScreen = () => {
+  const navigation = useNavigation();
   const [searchText, setSearchText] = useState('');
   const [selectedRole, setSelectedRole] = useState('');
 
@@ -44,7 +47,9 @@ const SearchScreen = () => {
       uri: 'https://tinyurl.com/42evm3m3'
     }} style={styles.userImage} />
       <View style={styles.userInfo}>
-        <Text style={styles.fullName}>{item.fullName}</Text>
+        <Pressable onPress={() => {
+        navigation.navigate("Untitled6");
+      }}><Text style={styles.fullName}>{item.fullName}</Text></Pressable>
         <Text style={styles.department}>{item.department}</Text>
         <Text style={styles.role}>{item.role}</Text>
         <Text style={styles.email}>{item.email}</Text>
@@ -71,7 +76,9 @@ const SearchScreen = () => {
         </TouchableOpacity>
       </View>
       <FlatList data={data} renderItem={renderItem} keyExtractor={item => item.id} contentContainerStyle={styles.listContainer} />
-      <TouchableOpacity style={styles.inviteButton}>
+      <TouchableOpacity style={styles.inviteButton} onPress={() => {
+      navigation.navigate("Untitled8");
+    }}>
         <Text style={styles.inviteButtonText}>Invite user</Text>
       </TouchableOpacity>
     </View>;

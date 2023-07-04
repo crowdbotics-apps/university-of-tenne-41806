@@ -16,7 +16,7 @@ const UserListScreen = () => {
     role: "User"
   }];
   return <View style={styles.container}>
-      <Text style={styles.title}>User List</Text>
+      <Text style={styles.title}>{"Archived User List"}</Text>
       {users.map((user, index) => <View key={index} style={styles.userContainer}>
           <Text style={styles.userName}>{user.name}</Text>
           <Text style={styles.userEmail}>{user.email}</Text>

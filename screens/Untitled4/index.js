@@ -9,7 +9,7 @@ const ScreenComponent = () => {
         <Text style={styles.title}>Visual Representation of Data</Text>
       </View>
       <View style={styles.instructions} onPress={() => {
-      navigation.navigate("Untitled11");
+      navigation.navigate("Untitled10");
     }}>
         <Text style={styles.instructionText}>Select Player/s</Text>
         <Text style={styles.instructionText}>Strength Progress</Text>
@@ -24,7 +24,7 @@ const ScreenComponent = () => {
         <Text style={styles.instructionText}>Manage Users</Text>
         <Text style={styles.instructionText}>Number of Players</Text>
         <Text style={styles.instructionText}>Number of Management Users</Text>
-        <Text style={styles.instructionText}>Number of Archived Players</Text>
+        <Text style={styles.instructionText}>{"Data verification"}</Text>
         <Text style={styles.instructionText}>View Archived Players</Text>
         <Text style={styles.instructionText}>Invite User</Text>
         <Text style={styles.instructionText}>Notification</Text>
@@ -88,6 +88,9 @@ const ScreenComponent = () => {
         </TouchableOpacity>
         <TouchableOpacity style={[styles.button, styles.MlHDGyCU]} onPress={() => {}}>
           <Text style={styles.buttonText}>My Profile</Text>
+        </TouchableOpacity>
+        <TouchableOpacity style={[styles.button, styles.dataVerificationButton]} onPress={() => {}}>
+          <Text style={styles.buttonText}>Data Verification</Text>
         </TouchableOpacity>
       </View>
     </View>;
@@ -189,6 +192,9 @@ const styles = StyleSheet.create({
   },
   MlHDGyCU: {
     backgroundColor: "#FF8C00"
+  },
+  dataVerificationButton: {
+    backgroundColor: "#808080"
   }
 });
 export default ScreenComponent;

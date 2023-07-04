@@ -40,65 +40,65 @@ const PlayerScreen = () => {
   const handleRejectAll = () => {// Reject all logic
   };
 
-  return <View style={_styles.xYbVlDyc}>
-      <Text style={_styles.PBinXMAA}>List of all players with data request</Text>
+  return <View style={_styles.FHpmXXQM}>
+      <Text style={_styles.EgCZwyoB}>List of all players with data request</Text>
 
-      <Text style={_styles.rPDvlcZd}>List of players who submitted the data:</Text>
-      <ScrollView style={_styles.wgqAGilM}>
-        {players.map(player => player.submitted && <TouchableOpacity key={player.id} style={_styles.uWuKnMDR} onPress={() => handlePlayerSelection(player)}>
+      <Text style={_styles.OCAwgjgt}>List of players who submitted the data:</Text>
+      <ScrollView style={_styles.aTHepAdg}>
+        {players.map(player => player.submitted && <TouchableOpacity key={player.id} style={_styles.oZXyQIJa} onPress={() => handlePlayerSelection(player)}>
               <Image source={{
           uri: 'https://tinyurl.com/42evm3m3'
-        }} style={_styles.WJVYuajG} />
+        }} style={_styles.ENLiIPYp} />
               <Text>{player.name} - {player.email}</Text>
             </TouchableOpacity>)}
       </ScrollView>
 
-      <Text style={_styles.AplZLkvw}>List of players who haven't submitted the data:</Text>
-      <ScrollView style={_styles.KrRtUCsp}>
-        {players.map(player => !player.submitted && <View key={player.id} style={_styles.IKgnqzxW}>
+      <Text style={_styles.WQWuiXfM}>List of players who haven't submitted the data:</Text>
+      <ScrollView style={_styles.IVVjEura}>
+        {players.map(player => !player.submitted && <View key={player.id} style={_styles.OUwZNVQk}>
               <Image source={{
           uri: 'https://tinyurl.com/42evm3m3'
-        }} style={_styles.AcvMOiAI} />
+        }} style={_styles.FJlpcBzF} />
               <Text>{player.name} - {player.email}</Text>
             </View>)}
       </ScrollView>
 
-      {selectedPlayer && <View style={_styles.WgiZwyKu}>
-          <Text style={_styles.eIRzKNug}>Specific player response:</Text>
+      {selectedPlayer && <View style={_styles.mJTXDopx}>
+          <Text style={_styles.IwZQIeep}>Specific player response:</Text>
           <Text>Player: {selectedPlayer.name}</Text>
           <Text>Email: {selectedPlayer.email}</Text>
         </View>}
 
-      <Text style={_styles.QAmCLCPB}>List of all requested data:</Text>
-      <ScrollView style={_styles.HagceGrp}>
+      <Text style={_styles.nrqwNyXz}>List of all requested data:</Text>
+      <ScrollView style={_styles.zZnriJmq}>
         {
         /* Render list of requested data */
       }
       </ScrollView>
 
-      <Text style={_styles.SyWlAVWC}>Specific data field:</Text>
+      <Text style={_styles.WLjracek}>Specific data field:</Text>
       <Text>Data field name</Text>
 
-      <Text style={_styles.JLeccgVs}>Previous value:</Text>
+      <Text style={_styles.zKWuExDV}>Previous value:</Text>
       <Text>Previous value</Text>
 
-      <Text style={_styles.coWjXQxg}>New value:</Text>
+      <Text style={_styles.KbVwYnLR}>New value:</Text>
       <Text>New value</Text>
 
-      <TouchableOpacity style={_styles.UzaeoxtW}>
-        <Text style={_styles.jYadoPCS}>Approve</Text>
+      <TouchableOpacity style={_styles.ROYzCkxA}>
+        <Text style={_styles.LbWbAvVU}>Approve</Text>
       </TouchableOpacity>
 
-      <TouchableOpacity style={_styles.CYexOphc}>
-        <Text style={_styles.YVdPSPlB}>Reject</Text>
+      <TouchableOpacity style={_styles.WklsDZNo}>
+        <Text style={_styles.yhrmHIlS}>Reject</Text>
       </TouchableOpacity>
 
-      <TouchableOpacity style={_styles.xLUDfHzz}>
-        <Text style={_styles.XXRzHGOV}>Approve all</Text>
+      <TouchableOpacity style={_styles.nKIUNfBa}>
+        <Text style={_styles.RVCFeUdZ}>Approve all</Text>
       </TouchableOpacity>
 
-      <TouchableOpacity style={_styles.IdHPZyye}>
-        <Text style={_styles.NZyfZnom}>Reject all</Text>
+      <TouchableOpacity style={_styles.ODxcbYLs}>
+        <Text style={_styles.johWGBmZ}>Reject all</Text>
       </TouchableOpacity>
     </View>;
 };
@@ -106,121 +106,121 @@ const PlayerScreen = () => {
 export default PlayerScreen;
 
 const _styles = StyleSheet.create({
-  xYbVlDyc: {
+  FHpmXXQM: {
     flex: 1,
     paddingHorizontal: 20,
     paddingTop: 20
   },
-  PBinXMAA: {
+  EgCZwyoB: {
     fontSize: 24,
     fontWeight: "bold",
     marginBottom: 20
   },
-  rPDvlcZd: {
+  OCAwgjgt: {
     fontSize: 18,
     fontWeight: "bold",
     marginBottom: 10
   },
-  wgqAGilM: {
+  aTHepAdg: {
     marginBottom: 20
   },
-  uWuKnMDR: {
+  oZXyQIJa: {
     flexDirection: "row",
     alignItems: "center",
     marginBottom: 10
   },
-  WJVYuajG: {
+  ENLiIPYp: {
     width: 50,
     height: 50,
     borderRadius: 25,
     marginRight: 10
   },
-  AplZLkvw: {
+  WQWuiXfM: {
     fontSize: 18,
     fontWeight: "bold",
     marginBottom: 10
   },
-  KrRtUCsp: {
+  IVVjEura: {
     marginBottom: 20
   },
-  IKgnqzxW: {
+  OUwZNVQk: {
     flexDirection: "row",
     alignItems: "center",
     marginBottom: 10
   },
-  AcvMOiAI: {
+  FJlpcBzF: {
     width: 50,
     height: 50,
     borderRadius: 25,
     marginRight: 10
   },
-  WgiZwyKu: {
+  mJTXDopx: {
     marginBottom: 20
   },
-  eIRzKNug: {
+  IwZQIeep: {
     fontSize: 18,
     fontWeight: "bold",
     marginBottom: 10
   },
-  QAmCLCPB: {
+  nrqwNyXz: {
     fontSize: 18,
     fontWeight: "bold",
     marginBottom: 10
   },
-  HagceGrp: {
+  zZnriJmq: {
     marginBottom: 20
   },
-  SyWlAVWC: {
+  WLjracek: {
     fontSize: 18,
     fontWeight: "bold",
     marginBottom: 10
   },
-  JLeccgVs: {
+  zKWuExDV: {
     fontSize: 18,
     fontWeight: "bold",
     marginBottom: 10
   },
-  coWjXQxg: {
+  KbVwYnLR: {
     fontSize: 18,
     fontWeight: "bold",
     marginBottom: 10
   },
-  UzaeoxtW: {
+  ROYzCkxA: {
     backgroundColor: "green",
     padding: 10,
     borderRadius: 5,
     marginBottom: 10
   },
-  jYadoPCS: {
+  LbWbAvVU: {
     color: "white",
     fontWeight: "bold"
   },
-  CYexOphc: {
+  WklsDZNo: {
     backgroundColor: "red",
     padding: 10,
     borderRadius: 5,
     marginBottom: 10
   },
-  YVdPSPlB: {
+  yhrmHIlS: {
     color: "white",
     fontWeight: "bold"
   },
-  xLUDfHzz: {
+  nKIUNfBa: {
     backgroundColor: "green",
     padding: 10,
     borderRadius: 5,
     marginBottom: 10
   },
-  XXRzHGOV: {
+  RVCFeUdZ: {
     color: "white",
     fontWeight: "bold"
   },
-  IdHPZyye: {
+  ODxcbYLs: {
     backgroundColor: "red",
     padding: 10,
     borderRadius: 5
   },
-  NZyfZnom: {
+  johWGBmZ: {
     color: "white",
     fontWeight: "bold"
   }

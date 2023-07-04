@@ -54,6 +54,9 @@ const SearchScreen = () => {
   return <View style={styles.container}>
       <View style={styles.searchBarContainer}>
         <TextInput style={styles.searchBar} placeholder="Search" value={searchText} onChangeText={setSearchText} onSubmitEditing={handleSearch} />
+        <TouchableOpacity style={styles.searchButton} onPress={handleSearch}>
+          <Text style={styles.searchButtonText}>Search</Text>
+        </TouchableOpacity>
       </View>
       <View style={styles.filterContainer}>
         <TouchableOpacity style={[styles.filterButton, selectedRole === 'Player' && styles.selectedFilterButton]} onPress={() => handleFilter('Player')}>
@@ -82,35 +85,45 @@ const styles = StyleSheet.create({
     paddingTop: 20
   },
   searchBarContainer: {
+    flexDirection: 'row',
+    alignItems: 'center',
     marginBottom: 20
   },
   searchBar: {
+    flex: 1,
     height: 40,
     borderWidth: 1,
     borderColor: '#ccc',
     borderRadius: 5,
-    paddingHorizontal: 10
+    paddingHorizontal: 10,
+    marginRight: 10
+  },
+  searchButton: {
+    backgroundColor: '#007AFF',
+    paddingHorizontal: 15,
+    paddingVertical: 10,
+    borderRadius: 5
+  },
+  searchButtonText: {
+    color: '#fff',
+    fontWeight: 'bold'
   },
   filterContainer: {
     flexDirection: 'row',
     marginBottom: 20
   },
   filterButton: {
-    flex: 1,
-    height: 40,
-    justifyContent: 'center',
-    alignItems: 'center',
-    borderWidth: 1,
-    borderColor: '#ccc',
+    backgroundColor: '#ccc',
+    paddingHorizontal: 15,
+    paddingVertical: 10,
     borderRadius: 5,
     marginRight: 10
   },
   selectedFilterButton: {
-    backgroundColor: '#ccc'
+    backgroundColor: '#007AFF'
   },
   filterButtonText: {
-    fontSize: 16,
-    fontWeight: 'bold'
+    color: '#000'
   },
   selectedFilterButtonText: {
     color: '#fff'
@@ -150,14 +163,13 @@ const styles = StyleSheet.create({
   },
   inviteButton: {
     backgroundColor: '#007AFF',
-    height: 40,
-    justifyContent: 'center',
-    alignItems: 'center',
-    borderRadius: 5
+    paddingHorizontal: 15,
+    paddingVertical: 10,
+    borderRadius: 5,
+    alignItems: 'center'
   },
   inviteButtonText: {
     color: '#fff',
-    fontSize: 16,
     fontWeight: 'bold'
   }
 });

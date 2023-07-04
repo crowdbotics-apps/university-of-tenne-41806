@@ -1,23 +1,17 @@
-import { useNavigation } from "@react-navigation/native";
 import React from 'react';
 import { View, Text, TextInput, TouchableOpacity, StyleSheet, Image } from 'react-native';
 
 const App = () => {
-  const navigation = useNavigation();
   return <View style={styles.container}>
       <Image source={{
       uri: 'https://tinyurl.com/42evm3m3'
     }} style={styles.logo} />
       <TextInput style={styles.input} placeholder="Username" />
       <TextInput style={styles.input} placeholder="Password" secureTextEntry />
-      <TouchableOpacity style={styles.button} onPress={() => {
-      navigation.navigate("Untitled4");
-    }}>
+      <TouchableOpacity style={styles.button}>
         <Text style={styles.buttonText}>Sign-in</Text>
       </TouchableOpacity>
-      <TouchableOpacity style={styles.forgotPasswordButton} onPress={() => {
-      navigation.navigate("Untitled3");
-    }}>
+      <TouchableOpacity style={styles.forgotPasswordButton}>
         <Text style={styles.forgotPasswordText}>Forgot password</Text>
       </TouchableOpacity>
     </View>;

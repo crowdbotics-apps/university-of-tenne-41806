@@ -37,9 +37,9 @@ const PlayerDetailsScreen = () => {
       }
       </View>
       <View style={styles.statisticsContainer}>
-        <Text style={styles.sectionTitle}>Statistics for a Specific Activity</Text>
+        <Text style={styles.sectionTitle}>Statistics for Specific Activity</Text>
         {
-        /* Render statistics for a specific activity */
+        /* Render statistics for specific activity */
       }
       </View>
       <View style={styles.videosContainer}>
@@ -54,21 +54,25 @@ const PlayerDetailsScreen = () => {
         /* Render video player */
       }
       </View>
-      <View style={styles.footer}>
-        <TouchableOpacity style={styles.iconContainer}>
-          {
-          /* Render edit icon */
-        }
-        </TouchableOpacity>
-        <TouchableOpacity style={styles.buttonContainer}>
-          <Text style={styles.buttonText}>Request Details</Text>
-        </TouchableOpacity>
-        <TouchableOpacity style={styles.iconContainer}>
-          {
-          /* Render archive icon */
-        }
-        </TouchableOpacity>
+      <View style={styles.otherDetailsContainer}>
+        <Text style={styles.sectionTitle}>Other Details</Text>
+        {
+        /* Render other details captured from APIs */
+      }
       </View>
+      <TouchableOpacity style={styles.editButton}>
+        {
+        /* Render edit icon */
+      }
+      </TouchableOpacity>
+      <TouchableOpacity style={styles.requestButton}>
+        <Text style={styles.requestButtonText}>Request Details</Text>
+      </TouchableOpacity>
+      <TouchableOpacity style={styles.archiveButton}>
+        {
+        /* Render archive icon */
+      }
+      </TouchableOpacity>
     </View>;
 };
 
@@ -80,6 +84,7 @@ const styles = {
   header: {
     backgroundColor: '#333',
     paddingVertical: 20,
+    paddingHorizontal: 10,
     alignItems: 'center'
   },
   title: {
@@ -108,7 +113,7 @@ const styles = {
   },
   teamDetailsContainer: {
     marginTop: 20,
-    paddingHorizontal: 20
+    paddingHorizontal: 10
   },
   sectionTitle: {
     fontSize: 18,
@@ -117,44 +122,50 @@ const styles = {
   },
   activitiesContainer: {
     marginTop: 20,
-    paddingHorizontal: 20
+    paddingHorizontal: 10
   },
   activityDetailsContainer: {
     marginTop: 20,
-    paddingHorizontal: 20
+    paddingHorizontal: 10
   },
   statisticsContainer: {
     marginTop: 20,
-    paddingHorizontal: 20
+    paddingHorizontal: 10
   },
   videosContainer: {
     marginTop: 20,
-    paddingHorizontal: 20
+    paddingHorizontal: 10
   },
   videoPlayerContainer: {
     marginTop: 20,
-    paddingHorizontal: 20
+    paddingHorizontal: 10
   },
-  footer: {
-    flexDirection: 'row',
-    justifyContent: 'space-around',
-    alignItems: 'center',
+  otherDetailsContainer: {
+    marginTop: 20,
+    paddingHorizontal: 10
+  },
+  editButton: {
+    position: 'absolute',
+    top: 20,
+    right: 20
+  },
+  requestButton: {
     backgroundColor: '#333',
-    paddingVertical: 10
-  },
-  iconContainer: {
-    padding: 10
-  },
-  buttonContainer: {
-    backgroundColor: '#fff',
-    paddingHorizontal: 20,
     paddingVertical: 10,
-    borderRadius: 5
+    paddingHorizontal: 20,
+    borderRadius: 5,
+    alignSelf: 'center',
+    marginTop: 20
   },
-  buttonText: {
-    color: '#333',
+  requestButtonText: {
+    color: '#fff',
     fontSize: 16,
     fontWeight: 'bold'
+  },
+  archiveButton: {
+    position: 'absolute',
+    bottom: 20,
+    right: 20
   }
 };
 export default PlayerDetailsScreen;

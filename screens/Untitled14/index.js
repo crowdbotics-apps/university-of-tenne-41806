@@ -1,7 +1,10 @@
+import { useNavigation } from "@react-navigation/native";
+import { Pressable } from "react-native";
 import React from 'react';
 import { View, Text, Button, Image, StyleSheet } from 'react-native';
 
 const ScreenComponent = () => {
+  const navigation = useNavigation();
   return <View style={styles.container}>
       <View style={styles.header}>
         <Text style={styles.title}>Visual Representation of Data</Text>
@@ -26,13 +29,17 @@ const ScreenComponent = () => {
       }
       </View>
       <View style={styles.trendsContainer}>
-        <Text style={styles.trendsTitle}>Data Trends</Text>
+        <Pressable onPress={() => {
+        navigation.navigate("Untitled7");
+      }}><Text style={styles.trendsTitle}>{"Archived players"}</Text></Pressable>
         {
         /* Graphs/charts displaying trends over time */
       }
       </View>
       <View style={styles.comparativeContainer}>
-        <Text style={styles.comparativeTitle}>Comparative Analysis</Text>
+        <Pressable onPress={() => {
+        navigation.navigate("Untitled10");
+      }}><Text style={styles.comparativeTitle}>{"Data verification "}</Text></Pressable>
         {
         /* Visualizations for comparing players */
       }
@@ -41,7 +48,9 @@ const ScreenComponent = () => {
         <Button title="Manage Users" onPress={() => {}} />
         <Text style={styles.manageUsersText}>Number of Players: 10</Text>
         <Text style={styles.manageUsersText}>Number of Management Users: 5</Text>
-        <Text style={styles.manageUsersText}>Number of Archived Players: 3</Text>
+        <Pressable onPress={() => {
+        navigation.navigate("Untitled5");
+      }}><Text style={styles.manageUsersText}>{"Manage users screen"}</Text></Pressable>
       </View>
       <View style={styles.buttonsContainer}>
         <Button title="View" onPress={() => {}} />
@@ -59,7 +68,9 @@ const ScreenComponent = () => {
       <View style={styles.verificationButtonContainer}>
         <Button title="Data Verification" onPress={() => {}} />
       </View>
-    </View>;
+    <Pressable onPress={() => {
+      navigation.navigate("Untitled11");
+    }}><Text style={styles.mCThawHJ}>{"Profile"}</Text></Pressable></View>;
 };
 
 const styles = StyleSheet.create({
@@ -142,6 +153,13 @@ const styles = StyleSheet.create({
   },
   verificationButtonContainer: {
     marginBottom: 20
+  },
+  mCThawHJ: {
+    width: 100,
+    height: 50,
+    lineHeight: 14,
+    fontSize: 14,
+    borderRadius: 0
   }
 });
 export default ScreenComponent;
